@@ -28,10 +28,10 @@ function loadMoreBtn() {
   servise.fetcArticles().then(hits => {
     const markup = buildTemplate(hits);
     iserListItems(markup);
-    window.scrollTo(0, 1000);
-
+      // console.dir(document.documentElement.offsetHeight)
+    
     window.scrollTo({
-      top: 1000,
+      top: document.documentElement.offsetHeight,
       behavior: 'smooth',
     });
   });
